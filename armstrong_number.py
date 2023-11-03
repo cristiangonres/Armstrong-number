@@ -11,8 +11,4 @@ Write some code to determine whether a number is an Armstrong number."""
 
 def is_armstrong_number(number):
     """function to determinate armstrong number"""
-    pwd = len(str(number))
-    total = 0
-    for num in str(number):
-        total += int(num) ** pwd
-    return total == number
+    return sum(int(x) ** len(str(number)) for x in str(number)) == number
